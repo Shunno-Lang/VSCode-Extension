@@ -3,13 +3,30 @@
   "displayName": "Shunno Programming Language",
   "description": "Shunno is a general purpose programming language for Bengali. It is designed to be easy to learn and use, while still being powerful enough to handle complex tasks. Shunno is a high-level, statically-typed language that is compiled to machine code. It is designed to be fast and efficient, while still being easy to read and write.",
   "version": "1.0.0",
-  "publisher": "S Technologies",
+  "publisher": "STechBD",
+  "id": "Shunno",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Shunno-Lang/VSCode-Extension"
+  },
+  "homepage": "https://www.stechbd.net/product/Shunno-VSCode-Extension",
+  "bugs": {
+    "url": "https://github.com/Shunno-Lang/VSCode-Extension/issues"
+  },
   "engines": {
-    "vscode": "^1.60.0"
+    "vscode": "^1.89.0"
   },
   "categories": [
     "Programming Languages"
   ],
+  "keywords": [
+    "shunno",
+    "programming",
+    "language",
+    "bengali"
+  ],
+  "pricing": "Free",
   "contributes": {
     "languages": [
       {
@@ -35,8 +52,11 @@
   "activationEvents": [
     "onLanguage:shunno"
   ],
-  "main": "./src/extension.ts",
-  "dependencies": {
+  "main": "./out/extension.js",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/vscode": "^1.89.0",
+    "@vscode/vsce": "^2.26.1",
     "vscode": "^1.1.34"
   }
 }
