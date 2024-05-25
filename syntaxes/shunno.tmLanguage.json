@@ -1,0 +1,85 @@
+{
+  "scopeName": "source.shunno",
+  "patterns": [
+    {
+      "include": "#comments"
+    },
+    {
+      "include": "#keywords"
+    },
+    {
+      "include": "#strings"
+    },
+    {
+      "include": "#numbers"
+    },
+    {
+      "include": "#operators"
+    },
+    {
+      "include": "#identifiers"
+    }
+  ],
+  "repository": {
+    "comments": {
+      "patterns": [
+        {
+          "match": "//.*",
+          "name": "comment.line.double-slash.shunno"
+        },
+        {
+          "match": "#.*",
+          "name": "comment.line.hash.shunno"
+        },
+        {
+          "match": "/\\*\\*.*\\*/",
+          "name": "comment.block.shunno"
+        }
+      ]
+    },
+    "keywords": {
+      "patterns": [
+        {
+          "match": "\\b(চলক|ধ্রুবক|সংখ্যা|ভগ্নাংশ|লেখা|বুল|সারি|সত্য|মিথ্যা|যদি|নাহলে|নাহলে_যদি|এবং|অথবা|নয়|যখন|চক্র|থামাও|চালাও|দেখাও)\\b",
+          "name": "keyword.other.shunno"
+        }
+      ]
+    },
+    "strings": {
+      "patterns": [
+        {
+          "match": "\"(.*?)\"",
+          "name": "string.quoted.double.shunno"
+        },
+        {
+          "match": "'(.*?)'",
+          "name": "string.quoted.single.shunno"
+        }
+      ]
+    },
+    "numbers": {
+      "patterns": [
+        {
+          "match": "[০১২৩৪৫৬৭৮৯]+(\\.[০১২৩৪৫৬৭৮৯]+)?",
+          "name": "constant.numeric.shunno"
+        }
+      ]
+    },
+    "operators": {
+      "patterns": [
+        {
+          "match": "==|===|!=|<|>|<=|>=|\\+\\+|\\-\\-|\\+|\\-|\\*|\\/|%|\\^|\\?|=",
+          "name": "keyword.operator.shunno"
+        }
+      ]
+    },
+    "identifiers": {
+      "patterns": [
+        {
+          "match": "[\\u0980-\\u09FF][\\u0980-\\u09FF0-9_]*",
+          "name": "variable.other.shunno"
+        }
+      ]
+    }
+  }
+}
